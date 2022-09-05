@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/google-title-icon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- header - start -->
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Store</a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" target="_blank" >Gmail</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">Images</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">Apps</a>
+                </li>
+                <li>
+                    <button id="sign-in-button">Sign in</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header end-->
+    
+     <!-- google-content - start -->
+    <main>
+     <section id="google-content">
+        <img src="img/google.png" alt="google-logo">
+        <div id="search">
+            <input type="text" id="query" value="">
+            <div id="icons">
+                <div>
+                    <img src="img/icons/search.png" alt="google-search-icon">
+                </div>
+                <div>
+                    <img src="img/icons/mic.png" alt="google-mic-icon">
+                </div>
+                <div id="buttons">
+                    <button id="searchBtn">Google Search</button>
+                    <button id="searchBtn">I'm Feeling Lucky</button>
+                </div>
+            </div>
+        </div>
+
+     </section>
+    </main>
+     <!-- google-content - end -->
+
+       <!-- footer - start -->
+
+       <footer>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Advertising</a>
+                </li>
+                <li>
+                    <a href="#">Business</a>
+                </li>
+                <li>
+                    <a href="#">How Search Works</a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Privarcy</a>
+                </li>
+                <li>
+                    <a href="#">Terms</a>
+                </li>
+                <li>
+                    <a href="#">Settings</a>
+                </li>
+            </ul>
+        </nav>
+       </footer>
+
+       <!-- script - start -->
+    <script>
+        let query = document.querySelector('#query');
+        let searchBtn = document.querySelector('.searchBtn');
+
+        searchBtn.onclick = function(){
+            let url = 'https://www.google.com/search?q='+query.value;
+            window.open(url,'_self');
+        }
+    </script>
+    <!-- scripts - end -->
+</body>
+</html>
